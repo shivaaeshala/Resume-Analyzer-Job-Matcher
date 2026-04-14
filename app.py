@@ -49,7 +49,7 @@ def detect_sections(text):
     sections = {
         "skills": any(word in text_lower for word in ["skills", "technical skills"]),
         "experience": any(word in text_lower for word in ["experience", "work experience", "professional experience"]),
-        "projects": "projects" in text_lower,
+        "projects": any(word in text_lower for word in ["projects", "project", "academic projects"]),
         "education": "education" in text_lower,
         "certifications": "certifications" in text_lower
     }
